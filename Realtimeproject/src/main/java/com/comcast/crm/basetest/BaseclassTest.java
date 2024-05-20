@@ -64,8 +64,8 @@ public class BaseclassTest {
 		public void configBC(/*String browser*/) throws IOException
 		{
 			System.out.println("====Launch browser=====");
-			//String BROWSER =/* browser;*/flib.getDataFromPropertiesFile("browser");
-			String BROWSER=System.getProperty("browser",flib.getDataFromPropertiesFile("browser"));
+			String BROWSER =/* browser;*/flib.getDataFromPropertiesFile("browser");
+			//String BROWSER=System.getProperty("browser",flib.getDataFromPropertiesFile("browser"));
 			if(BROWSER.equals("chrome"))
 			{
 				driver=new ChromeDriver();
@@ -79,9 +79,9 @@ public class BaseclassTest {
 			{
 				driver=new ChromeDriver();
 			}
-			sdriver=driver;
-			UtilityClassObject.setDriver(driver);
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+			//sdriver=driver;
+			//UtilityClassObject.setDriver(driver);
+			//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		}
 		//@BeforeMethod
 		@BeforeMethod(groups = {"smokeTest","regressionTest"})
